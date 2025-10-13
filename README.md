@@ -30,7 +30,9 @@ src/
  ├── TesteAluno.java
  ├── TesteCurso.java
  ├── TesteProfessor.java
+ ├── TesteAula.java
  └── TesteUsuario.java
+ 
   </pre>
 </section>
 
