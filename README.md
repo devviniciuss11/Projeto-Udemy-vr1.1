@@ -3,59 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projeto Udemy - Sistema Educacional</title>
-<style>
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #0f172a;
-    color: #f8fafc;
-    margin: 0;
-    padding: 0;
-  }
-  header {
-    background: linear-gradient(135deg, #3b82f6, #06b6d4);
-    text-align: center;
-    padding: 2rem;
-    border-bottom: 3px solid #1e293b;
-  }
-  header h1 {
-    font-size: 2.5rem;
-    margin: 0;
-  }
-  section {
-    max-width: 900px;
-    margin: 2rem auto;
-    background: #1e293b;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-  }
-  h2 {
-    color: #38bdf8;
-    border-bottom: 2px solid #38bdf8;
-    padding-bottom: .5rem;
-  }
-  pre {
-    background: #0f172a;
-    padding: 1rem;
-    border-radius: 8px;
-    overflow-x: auto;
-    color: #e2e8f0;
-  }
-  ul {
-    line-height: 1.8;
-  }
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background: #0f172a;
-    color: #94a3b8;
-    border-top: 1px solid #1e293b;
-  }
-</style>
-</head>
-<body>
-<header>
   <h1>🎓 Projeto Udemy — Sistema Educacional em Java</h1>
   <p>Simulação de gerenciamento de alunos, professores e cursos com POO</p>
 </header>
