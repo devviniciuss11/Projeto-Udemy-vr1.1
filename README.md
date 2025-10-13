@@ -47,7 +47,7 @@ src/
 <section>
   <h2>⚙️ Tecnologias Utilizadas</h2>
   <ul>
-    <li>Java SE</li>
+    <li>Java</li>
     <li>Paradigma Orientado a Objetos</li>
     <li>IntelliJ IDEA</li>
   </ul>
