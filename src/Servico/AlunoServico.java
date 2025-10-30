@@ -39,8 +39,15 @@ public class AlunoServico {
                     }
                     Aluno aluno = new Aluno(nome,cpf,dataNasimento, email, senha);
                     this.repositorioaluno.salvar(aluno);
-                    menuAluno.menuAluno(aluno, inputaluno);
+                    aluno.email();
+                    aluno.senha();
+                    try {
+                        Thread.sleep(3000);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
                     teste01.adicionando01();
+                    menuAluno.menuAluno(aluno, inputaluno);
                     break;
                 } catch (ParseException e) {
                     System.out.println("Formato de data inválido. Tente novamente.");
@@ -109,4 +116,6 @@ public class AlunoServico {
         CursoRepositorio.mostrarCursoDoaluno();
 
         }
+
+
     }

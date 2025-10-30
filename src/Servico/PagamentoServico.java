@@ -14,7 +14,7 @@ public class PagamentoServico {
 
     public  boolean metodoDePagamento(String valorDoCurso){
         System.out.println("Digite o valor do Pagamento: ");
-        String valorPagamento = inputpagamento.nextLine();
+        int valorPagamento = inputpagamento.nextInt();
 
         System.out.println("Escolha o metodo de pagamento:");
         System.out.println("[1] Pix");

@@ -44,6 +44,7 @@ public class Projeto_NodeCursos {
                             Thread.sleep(3000);
                             break;
                         }
+
                     }
                     catch (Exception e){
                         System.out.println("Erro ao entrar no menu");

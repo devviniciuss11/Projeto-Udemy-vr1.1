@@ -16,6 +16,21 @@ public class Professor extends Usuario {
 
     }
 
+    public Professor(String nome, String email) {
+        super(nome, email);
+    }
+
+
+    @Override
+    public void senha() {
+        System.out.println("Sua Senha pra Realizar o Login: "+ getSenha());
+    }
+    @Override
+    public void email() {
+        System.out.println("Seu Email Pra Realizar o Login: "+ getEmail());
+    }
+
+
     public String getQualificacoes() {
         return qualificacoes;
     }
@@ -31,5 +46,7 @@ public class Professor extends Usuario {
     public void setCurso(String curso) {
         this.curso = curso;
     }
+
+
 
 }

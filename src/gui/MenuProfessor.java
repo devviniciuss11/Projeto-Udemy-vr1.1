@@ -1,6 +1,7 @@
 package gui;
 
 import Servico.CursoServico;
+import Servico.ProfessorServico;
 import entidades.Professor;
 
 import java.util.Scanner;
@@ -14,7 +15,8 @@ public class MenuProfessor {
         System.out.println("[1]Adicionar Curso");
         System.out.println("[2]Remover Curso");
         System.out.println("[3]Ver Seus Cursos");
-        System.out.println("[4]Sair");
+        System.out.println("[4]Ver Seus Dados");
+        System.out.println("[5]Sair");
        int opcao = sc.nextInt();
        sc.nextLine();
        if (opcao > 4 || opcao == 0){
@@ -35,8 +37,12 @@ public class MenuProfessor {
               cursoServico3.professorVerCursos(sc);
                break;
            case 4:
+               ProfessorServico professorServico = new ProfessorServico();
+               professorServico.professorVerSeusDados(sc);
                break;
 
+               case 5:
+                   break;
 
 
 

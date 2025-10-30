@@ -1,7 +1,7 @@
 package entidades;
 
 public abstract class Usuario {
-    public String nome;
+    private String nome;
     private String cpf;
     private String dataNascimento;
     private String email;
@@ -14,6 +14,16 @@ public abstract class Usuario {
         this.email = email;
         this.senha = senha;
     }
+
+    public Usuario(String nome, String email) {
+        this.nome = nome;
+        this.email = email;
+    }
+
+    public abstract void senha();
+    public abstract void email();
+
+
 
     public String getNome() {
         return nome;

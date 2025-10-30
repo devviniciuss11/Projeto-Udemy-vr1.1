@@ -10,6 +10,21 @@ public class Aluno extends Usuario {
         super(nome, email, senha, cpf, dataNascimento);
     }
 
+    public Aluno(String dataNascimento, String email) {
+        super(dataNascimento, email);
+    }
+
+    @Override
+    public void senha() {
+        System.out.println("Sua senha Pra Realizar o Login: "+ getSenha());
+
+    }
+    @Override
+    public void email() {
+        System.out.println("Seu Email Pra Realizar o Login: "+ getEmail());
+    }
+
+
     public ArrayList<Curso> getCursos() {
         return cursosDoAluno;
     }

@@ -3,6 +3,7 @@ package Servico;
 import java.util.Scanner;
 
 import entidades.Curso;
+import entidades.Usuario;
 import interfacess.Teste;
 import Repositorio.ProfessorRepositorio;
 import entidades.Professor;
@@ -43,8 +44,16 @@ public class ProfessorServico {
 
             Professor professor = new Professor(nome, cpf, dataNascimento, email, senha, qualificacao);
             repositorioprofessor.salvar(professor);
+            professor.email();
+            professor.senha();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        teste01.adicionando01();
             menuProfessor.menuProfessor(professor, sc);
-            teste01.adicionando01();
+
 
     }
 
@@ -63,7 +72,16 @@ public class ProfessorServico {
 
     }
 
-
+    public void professorVerSeusDados(Scanner sc){
+        System.out.println("Digite o nome do professor: ");
+        String nome = sc.nextLine();
+        System.out.println("Digite o email do professor: ");
+        String email = sc.nextLine();
+        Professor professor1 = new Professor(nome, email);
+        System.out.println("----SEUS DADOS----");
+        System.out.println("SEU NOME "+professor1.getNome());
+        System.out.println("SEU EMAIL "+professor1.getEmail());
+    }
 
 
 
