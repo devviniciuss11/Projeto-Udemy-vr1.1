@@ -1,6 +1,7 @@
 package Servico;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
@@ -107,15 +108,50 @@ public class AlunoServico {
             aluno.setCursos(curso);
 
             System.out.println("Novo curso adquirido");
-            CursoRepositorio.mostrarCursoDoaluno();
+            //CursoRepositorio.mostrarCursoDoaluno();
         }
 
         }
 
-        public void vercursosadquiridos(){
-        CursoRepositorio.mostrarCursoDoaluno();
-
+    public void vercursosadquiridos(Aluno aluno){
+        ArrayList<Curso> cursosDoAluno = aluno.getCursos();
+        if (cursosDoAluno.isEmpty()) {
+            System.out.println("Você ainda não adquiriu nenhum curso.");
+        } else {
+            System.out.println("--- Seus Cursos Adquiridos ---");
+            for (Curso curso : cursosDoAluno) {
+                System.out.println("- " + curso.getCursoNome());
+            }
+            System.out.println("------------------------------");
         }
-
-
     }
+
+    public void removerCursoAdquirido(Scanner sc, Aluno aluno) {
+        vercursosadquiridos(aluno);
+        ArrayList<Curso> cursosDoAluno = aluno.getCursos();
+
+        if (cursosDoAluno.isEmpty()) {
+            return; // Sai do método se não houver cursos para remover
+        }
+
+        System.out.println("Digite o nome do curso que deseja remover:");
+        String nomeCursoParaRemover = sc.nextLine();
+
+        Curso cursoParaRemover = null;
+        for (Curso curso : cursosDoAluno) {
+            if (curso.getCursoNome().equalsIgnoreCase(nomeCursoParaRemover)) {
+                cursoParaRemover = curso;
+                break;
+            }
+        }
+
+        if (cursoParaRemover != null) {
+            aluno.excluirCurso(cursoParaRemover);
+            System.out.println("Curso \"" + nomeCursoParaRemover + "\" removido com sucesso!");
+        } else {
+            System.out.println("Curso não encontrado na sua lista.");
+        }
+    }
+
+
+}

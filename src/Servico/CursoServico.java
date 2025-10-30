@@ -1,6 +1,7 @@
 package Servico;
 
 import Repositorio.CursoRepositorio;
+import entidades.Aluno;
 import entidades.Curso;
 import gui.MenuProfessor;
 import interfacess.Teste;
@@ -39,10 +40,10 @@ public class CursoServico {
         repositoriocurso.mostrarCurso();
     }
 
-    public void alunoVerCursos(){
+    public void alunoVerCursos(Aluno aluno){
         System.out.println("------------------- CURSOS DO ALUNO ---------------------");
         System.out.println("---------------------------------------------------------");
-        repositoriocurso.mostrarCursoDoaluno();
+        repositoriocurso.mostrarCursosDoAluno(aluno);
     }
 
 }

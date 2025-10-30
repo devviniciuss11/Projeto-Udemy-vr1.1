@@ -4,15 +4,13 @@ import java.util.ArrayList;
 
 public class Aluno extends Usuario {
 
-    private static ArrayList<Curso> cursosDoAluno;
+    private ArrayList<Curso> cursosDoAluno;
 
     public Aluno(String nome, String email, String senha, String cpf, String dataNascimento) {
         super(nome, email, senha, cpf, dataNascimento);
+        this.cursosDoAluno = new ArrayList<>();
     }
 
-    public Aluno(String dataNascimento, String email) {
-        super(dataNascimento, email);
-    }
 
     @Override
     public void senha() {

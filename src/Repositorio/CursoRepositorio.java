@@ -1,5 +1,6 @@
 package Repositorio;
 
+import entidades.Aluno;
 import entidades.Curso;
 
 import java.util.ArrayList;
@@ -58,12 +59,15 @@ public class CursoRepositorio {
         return null;
 
     }
-    public static void mostrarCursoDoaluno(){
-        for (int i = 0; i < cursosDoAluno.size(); i++) {
-            System.out.println(cursosDoAluno.get(i).getCursoNome());
+    public void mostrarCursosDoAluno(Aluno aluno) {
+        ArrayList<Curso> cursosDoAluno = aluno.getCursos();
+        if (cursosDoAluno.isEmpty()) {
+            System.out.println("Você ainda não está matriculado em nenhum curso.");
+        } else {
+            System.out.println("Você está matriculado nos seguintes cursos:");
+            for (Curso curso : cursosDoAluno) {
+                System.out.println("- " + curso.getCursoNome());
+            }
         }
 
-
-    }
-
-}
+}}

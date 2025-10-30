@@ -1,6 +1,7 @@
 package gui;
 
 import Servico.AlunoServico;
+import Servico.CursoServico;
 import entidades.Aluno;
 import entidades.Curso;
 
@@ -27,15 +28,16 @@ public class MenuAluno {
                 alunoServico.comprar(sc, aluno);
                 break;
 
-            case 2: //alunoservicos.alunoremovercursos
+            case 2:
+                AlunoServico alunoServicoRemover = new AlunoServico();
+                alunoServicoRemover.removerCursoAdquirido(sc, aluno);
                 break;
 
             case 3:
-                AlunoServico alunoServico2 = new AlunoServico();
-                alunoServico2.vercursosadquiridos();
-                System.out.println(aluno.getCursos());
+                CursoServico cursoServico = new CursoServico();
+                cursoServico.alunoVerCursos(aluno);
+                break;
 
-                    break;
 
         }
     }
