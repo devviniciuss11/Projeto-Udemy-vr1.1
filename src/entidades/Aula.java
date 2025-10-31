@@ -1,13 +1,13 @@
 package entidades;
 
-public class Materia {
+public class Aula {
 
     public Professor professor;
     public String conteudo;
     public String nomeDaMateria;
     public String atividade;
 
-   public Materia(String data, double horario, Professor professor, String conteudo, String nomeDaMateria, String atividade){
+   public Aula(String data, double horario, Professor professor, String conteudo, String nomeDaMateria, String atividade){
 
 
         this.professor = professor;
