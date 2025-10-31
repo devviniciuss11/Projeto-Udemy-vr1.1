@@ -13,8 +13,18 @@ public class PagamentoServico {
     private PagamentoRepositorio chequeRepositorio = new PagamentoRepositorio();
 
     public  boolean metodoDePagamento(String valorDoCurso){
+        String valorCursoNumericoStr = valorDoCurso.replaceAll("[^0-9,]", "").replace(",", ".");
+        double valorCursoDouble = Double.parseDouble(valorCursoNumericoStr);
+
+        System.out.println("O valor do curso é: R$" + String.format("%.2f", valorCursoDouble));
         System.out.println("Digite o valor do Pagamento: ");
-        int valorPagamento = inputpagamento.nextInt();
+        double valorPagamento = inputpagamento.nextDouble();
+        inputpagamento.nextLine();
+
+        if (valorPagamento != valorCursoDouble) {
+            System.out.println("Valor incorreto. Digite o mesmo valor do curso para prosseguir.");
+            return false;
+        }
 
         System.out.println("Escolha o metodo de pagamento:");
         System.out.println("[1] Pix");

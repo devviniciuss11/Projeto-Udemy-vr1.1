@@ -104,11 +104,17 @@ public class AlunoServico {
         String nome = sc.nextLine();
         Curso curso = CursoRepositorio.verificarCursoPorNome(nome);
         boolean pagamentoAprovado = pagamentoServico.metodoDePagamento(curso.getValorDoCurso());
+
+        if (curso == null) {
+            System.out.println("Curso não encontrado. Tente novamente.");
+            return;
+        }
+
         if (pagamentoAprovado == true){
             aluno.setCursos(curso);
 
             System.out.println("Novo curso adquirido");
-            //CursoRepositorio.mostrarCursoDoaluno();
+
         }
 
         }
@@ -131,7 +137,7 @@ public class AlunoServico {
         ArrayList<Curso> cursosDoAluno = aluno.getCursos();
 
         if (cursosDoAluno.isEmpty()) {
-            return; // Sai do método se não houver cursos para remover
+            return;
         }
 
         System.out.println("Digite o nome do curso que deseja remover:");
