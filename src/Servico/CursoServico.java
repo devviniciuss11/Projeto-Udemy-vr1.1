@@ -3,8 +3,7 @@ package Servico;
 import Repositorio.CursoRepositorio;
 import entidades.Aluno;
 import entidades.Curso;
-import gui.MenuProfessor;
-import interfacess.Teste;
+
 
 import java.util.Scanner;
 
@@ -33,7 +32,7 @@ public class CursoServico {
         System.out.println("Curso removido com sucesso!");
     }
 
-    public void professorVerCursos(Scanner sc){
+    public void professorVerCursos(){
         System.out.println("------------------- CURSOS DO PROFESSOR ---------------------");
         System.out.println("-------------------------------------------------------------");
         repositoriocurso.mostrarCurso();

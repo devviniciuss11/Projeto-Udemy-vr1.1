@@ -38,7 +38,7 @@ public class CursoRepositorio {
         if(cursoEncontrado != null){
             System.out.println("Procurando Curso....");
             cursolist.remove(cursoEncontrado);
-            System.out.println("O Curso foi removido com sucesso!");
+
 
         }
         else{

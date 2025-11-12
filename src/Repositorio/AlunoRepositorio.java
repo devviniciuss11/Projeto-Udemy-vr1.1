@@ -15,7 +15,7 @@ public class AlunoRepositorio {
 
     public boolean verificarAlunoPorEmail(String email) {
         for (Aluno aluno : alunolist) {
-            if (aluno.getCpf().equalsIgnoreCase(email)) {
+            if (aluno.getEmail().equalsIgnoreCase(email)) {
                 return true;
             }
         }
