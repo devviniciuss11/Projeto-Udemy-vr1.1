@@ -1,15 +1,12 @@
 package Repositorio;
 import java.util.ArrayList;
 import entidades.Aluno;
-import interfacess.Teste;
-
-import java.util.Optional;
 import java.util.Scanner;
 
 public class AlunoRepositorio {
     private static ArrayList <Aluno> alunolist = new ArrayList<>();
-    private Scanner input_do_aluno = new Scanner(System.in);
-    Teste teste01 = new Teste();
+
+
 
     public void salvar(Aluno aluno) {
         alunolist.add(aluno);

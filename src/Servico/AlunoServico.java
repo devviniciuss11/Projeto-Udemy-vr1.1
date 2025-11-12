@@ -97,10 +97,10 @@ public class AlunoServico {
 
 
 
-    public void comprar(Scanner sc,Aluno aluno) {
+    public void comprarCurso(Scanner sc, Aluno aluno) {
         System.out.println("Lista de cursos Disponiveis: :");
         CursoRepositorio.mostrarCurso();
-        System.out.println("Digite qual deseja comprar: ");
+        System.out.println("Digite qual Curso Deseja Comprar : ");
         String nome = sc.nextLine();
         Curso curso = CursoRepositorio.verificarCursoPorNome(nome);
         boolean pagamentoAprovado = pagamentoServico.metodoDePagamento(curso.getValorDoCurso());
@@ -119,7 +119,7 @@ public class AlunoServico {
 
         }
 
-    public void vercursosadquiridos(Aluno aluno){
+    public void verCursosAdquiridos(Aluno aluno){
         ArrayList<Curso> cursosDoAluno = aluno.getCursos();
         if (cursosDoAluno.isEmpty()) {
             System.out.println("Você ainda não adquiriu nenhum curso.");
@@ -133,7 +133,7 @@ public class AlunoServico {
     }
 
     public void removerCursoAdquirido(Scanner sc, Aluno aluno) {
-        vercursosadquiridos(aluno);
+        verCursosAdquiridos(aluno);
         ArrayList<Curso> cursosDoAluno = aluno.getCursos();
 
         if (cursosDoAluno.isEmpty()) {

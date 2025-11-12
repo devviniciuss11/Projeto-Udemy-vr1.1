@@ -14,7 +14,10 @@ public class PagamentoServico {
 
     public  boolean metodoDePagamento(String valorDoCurso){
         String valorCursoNumericoStr = valorDoCurso.replaceAll("[^0-9,]", "").replace(",", ".");
+        //O regex "[^0-9]" significa "qualquer caractere que NÃO seja (^) um dígito de 0 a 9"
+        //O poder do Regex - remover tudo que não for número
         double valorCursoDouble = Double.parseDouble(valorCursoNumericoStr);
+        //O Double.parseDouble() converte a String para um double
 
         System.out.println("O valor do curso é: R$" + String.format("%.2f", valorCursoDouble));
         System.out.println("Digite o valor do Pagamento: ");

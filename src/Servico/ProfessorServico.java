@@ -1,9 +1,6 @@
 package Servico;
 
 import java.util.Scanner;
-
-import entidades.Curso;
-import entidades.Usuario;
 import interfacess.Teste;
 import Repositorio.ProfessorRepositorio;
 import entidades.Professor;

@@ -15,6 +15,10 @@ public class Professor extends Usuario {
         this.qualificacoes = qualificacoes;
 
     }
+    public Professor() {
+        super();
+        this.cursosDoProfessor = new ArrayList<>();
+    }
 
     public Professor(String nome, String email) {
         super(nome, email);

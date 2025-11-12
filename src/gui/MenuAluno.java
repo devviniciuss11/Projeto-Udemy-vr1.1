@@ -3,7 +3,6 @@ package gui;
 import Servico.AlunoServico;
 import Servico.CursoServico;
 import entidades.Aluno;
-import entidades.Curso;
 
 import java.util.Scanner;
 
@@ -19,13 +18,13 @@ public class MenuAluno {
         System.out.println("[4]Sair");
         int opcao = sc.nextInt();
         sc.nextLine();
-        if (opcao > 4 || opcao == 0){
+        if (opcao > 3 || opcao == 0){
             System.out.println("Digite uma Opcao Valida: ");
         }
         switch(opcao){
             case 1:
                 AlunoServico alunoServico = new AlunoServico();
-                alunoServico.comprar(sc, aluno);
+                alunoServico.comprarCurso(sc, aluno);
                 break;
 
             case 2:

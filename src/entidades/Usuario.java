@@ -7,6 +7,8 @@ public abstract class Usuario {
     private String email;
     private String senha;
 
+    public  Usuario() {}
+
     public Usuario(String nome, String cpf, String dataNascimento, String email, String senha) {
         this.nome = nome;
         this.cpf = cpf;
@@ -22,6 +24,7 @@ public abstract class Usuario {
 
     public abstract void senha();
     public abstract void email();
+
 
 
 

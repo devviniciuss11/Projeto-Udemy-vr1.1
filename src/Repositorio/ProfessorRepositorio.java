@@ -1,7 +1,5 @@
 package Repositorio;
 import java.util.ArrayList;
-
-
 import entidades.Professor;
 import java.util.Scanner;
 
@@ -34,6 +32,7 @@ public class ProfessorRepositorio {
         for (Professor professor : professorlist) {
             if (professor.getCpf().equalsIgnoreCase(excluindoprofessor)) {
                 professorEncontrado = professor;
+
                 break;
             }
         }

@@ -2,7 +2,7 @@ package Servico;
 
 import java.util.Scanner;
 
-public class NodeCursos_Exemplo {
+public class NodeCursosApresentacao {
     public void ver_NodeCursos(Scanner sc) {
 
         System.out.println("+------------------------------------------------------------------------------------------+");

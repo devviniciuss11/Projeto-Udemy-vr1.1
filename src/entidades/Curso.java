@@ -13,6 +13,13 @@ public class Curso {
         this.valorDoCurso = valorDoCurso;
         this.cursoDescricao= cursoDescricao;
     }
+    public Curso() {
+    }
+
+    public Curso(String cursoNome, String valorDoCurso) {
+        this.cursoNome = cursoNome;
+        this.valorDoCurso = valorDoCurso;
+    }
 
 
     public String getCursoNome(){

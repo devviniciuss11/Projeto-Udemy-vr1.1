@@ -10,6 +10,15 @@ public class Aluno extends Usuario {
         super(nome, email, senha, cpf, dataNascimento);
         this.cursosDoAluno = new ArrayList<>();
     }
+    public Aluno() {
+        super("Nome", "Email"  );
+        this.cursosDoAluno = new ArrayList<>();
+    }
+
+    public Aluno(String nome, String email) {
+        super(nome, email);
+        this.cursosDoAluno = new ArrayList<>();
+    }
 
 
     @Override

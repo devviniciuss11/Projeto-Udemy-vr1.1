@@ -2,7 +2,7 @@ package Servico;
 
 import java.util.Scanner;
 
-public class Projeto_NodeCursos {
+public class ProjetoNodeCursos {
 
     public static void main(String[] args) {
 
@@ -21,7 +21,7 @@ public class Projeto_NodeCursos {
 
                     switch (entrada){
                         case 1:
-                        NodeCursos_Exemplo exemplo = new NodeCursos_Exemplo();
+                        NodeCursosApresentacao exemplo = new NodeCursosApresentacao();
                         exemplo.ver_NodeCursos(sc);
                         break;
 
@@ -40,7 +40,7 @@ public class Projeto_NodeCursos {
                         subMenu2.menuDeCursosOferecidos(sc);
 
                         case 6:
-                            System.out.println("Saindo");
+                            System.out.println("Saindo...");
                             Thread.sleep(3000);
                             break;
                         }

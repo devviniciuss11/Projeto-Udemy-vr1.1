@@ -11,8 +11,7 @@ import java.util.Scanner;
 public class CursoServico {
 
     CursoRepositorio repositoriocurso = new CursoRepositorio();
-    MenuProfessor menuProfessor = new MenuProfessor();
-    Teste addcurso = new Teste();
+
 
     public void professorAdicionarCurso(Scanner sc){
         System.out.println("Digite o nome do curso: ");
