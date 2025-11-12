@@ -18,20 +18,7 @@
 </section>
 
 <section>
-  <h2>🧱 Estrutura do Projeto</h2>
-  <pre>
-src/
- ├── aluno.java
- ├── aula.java
- ├── curso.java
- ├── professor.java
- ├── usuario.java
- ├── Projeto_Udemy.java
- ├── TesteAluno.java
- ├── TesteCurso.java
- ├── TesteProfessor.java
- ├── TesteAula.java
- └── TesteUsuario.java
+
  
   </pre>
 </section>
@@ -60,7 +47,7 @@ src/
   <ol>
     <li>Abrir o projeto em uma IDE Java (ex: IntelliJ).</li>
     <li>Compilar as classes em <code>src/</code>.</li>
-    <li>Executar as classes de teste (ex: <code>TesteAluno.java</code>).</li>
+    <li>Executar as classes de teste (ex: <code>ProjetoNodeCursos</code>).</li>
   </ol>
 </section>
 
