@@ -11,6 +11,10 @@ import gui.MenuAluno;
 import interfacess.Teste;
 import Repositorio.AlunoRepositorio;
 import Repositorio.CursoRepositorio;
+
+import static Repositorio.AlunoRepositorio.alunolist;
+import static Repositorio.ProfessorRepositorio.professorlist;
+
 public class AlunoServico {
     PagamentoServico pagamentoServico = new PagamentoServico();
     AlunoRepositorio repositorioaluno = new AlunoRepositorio();
@@ -55,6 +59,27 @@ public class AlunoServico {
                 }
             }
         }
+    }
+
+    public void excluirAluno(Scanner sc) {
+        System.out.println("Qual Aluno você deseja excluir do cadastro? Digite o CPF:");
+        String cpf = sc.nextLine();
+        Aluno exluirAluno = null;
+        for (Aluno aluno : alunolist) {
+            if (aluno.getCpf().equals(cpf)) {
+                exluirAluno = aluno;
+                break;
+            }
+        }
+        if (exluirAluno != null) {
+            System.out.println("Procurando Aluno....");
+            professorlist.remove(exluirAluno);
+            System.out.println("O Aluno foi excluído com sucesso.\n");
+        } else {
+            System.out.println("Aluno não encontrado. Tente novamente!\n");
+        }
+
+
     }
 
     public void login(Scanner sc) {
@@ -157,6 +182,16 @@ public class AlunoServico {
         } else {
             System.out.println("Curso não encontrado na sua lista.");
         }
+    }
+    public void alunoVerSeusDados(Scanner sc){
+        System.out.println("Digite o nome do Aluno: ");
+        String nome = sc.nextLine();
+        System.out.println("Digite o email do Aluno: ");
+        String email = sc.nextLine();
+        Aluno aluno = new Aluno(nome, email);
+        System.out.println("----SEUS DADOS----");
+        System.out.println("SEU NOME "+ aluno.getNome());
+        System.out.println("SEU EMAIL "+ aluno.getEmail());
     }
 
 

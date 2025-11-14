@@ -42,6 +42,7 @@ public class ProjetoNodeCursos {
                         case 6:
                             System.out.println("Saindo...");
                             Thread.sleep(3000);
+                            repeticao = 2;
                             break;
                         }
 

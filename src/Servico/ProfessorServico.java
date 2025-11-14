@@ -6,11 +6,13 @@ import Repositorio.ProfessorRepositorio;
 import entidades.Professor;
 import gui.MenuProfessor;
 
+import static Repositorio.ProfessorRepositorio.professorlist;
+
 public class ProfessorServico {
     ProfessorRepositorio repositorioprofessor = new ProfessorRepositorio();
     Teste teste01 = new Teste();
     MenuProfessor menuProfessor = new MenuProfessor();
-
+    Scanner InputDoProfessor = new Scanner(System.in);
     public void cadastrar(Scanner sc) {
         System.out.println("Digite o nome do professor: ");
         String nome = sc.nextLine();
@@ -66,6 +68,28 @@ public class ProfessorServico {
             System.out.println("Email ou Senha Incorretas");
         }
 
+
+    }
+    public void excluirProfessor() {
+        System.out.println("Qual Professor você deseja excluir do cadastro? Digite o CPF:");
+        String excluindoprofessor = InputDoProfessor.nextLine();
+        Professor professorEncontrado = null;
+
+        for (Professor professor : professorlist) {
+            if (professor.getCpf().equalsIgnoreCase(excluindoprofessor)) {
+                professorEncontrado = professor;
+
+                break;
+            }
+        }
+
+        if (professorEncontrado != null) {
+            System.out.println("Procurando Professor....");
+            professorlist.remove(professorEncontrado);
+            System.out.println("O Professor foi excluído com sucesso.\n");
+        } else {
+            System.out.println("Professor não encontrado. Tente novamente!\n");
+        }
 
     }
 

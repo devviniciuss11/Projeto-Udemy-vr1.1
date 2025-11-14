@@ -9,9 +9,17 @@ public class SubMenu {
     public void menuDeCadastroDeAluno(Scanner sc) {
         System.out.println("[1] - Login");
         System.out.println("[2] - Cadastro de Aluno");
-        System.out.println("[0] - Voltar");
+        System.out.println("[3] - Voltar");
         int opcao = sc.nextInt();
         sc.nextLine();
+        if (opcao >3 || opcao == 0) {
+            System.out.println("Digite uma opção válida");
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
         switch (opcao) {
             case 1:
                 alunoServico.login(sc);
@@ -19,7 +27,7 @@ public class SubMenu {
             case 2:
                 alunoServico.cadastrar(sc);
                 break;
-            case 0:
+            case 3:
                 System.out.println("voltando...");
                 break;
 
@@ -32,6 +40,14 @@ public class SubMenu {
         System.out.println("[3] - Voltar");
         int opcao = sc.nextInt();
         sc.nextLine();
+        if (opcao >3 || opcao == 0) {
+            System.out.println("Digite uma opção válida");
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
         switch (opcao) {
 
             case 1:
@@ -53,14 +69,27 @@ public class SubMenu {
         System.out.println("Voce so pode entrar se tiver uma conta aluno!!!");
         System.out.println("[1] - Login");
         System.out.println("[2] - Cadastro de Alunos");
+        System.out.println("[3] - Voltar");
         int opcao = sc.nextInt();
         sc.nextLine();
+        if (opcao >3 || opcao == 0) {
+            System.out.println("Digite uma opção válida");
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
         switch (opcao) {
             case 1:
                 alunoServico.login(sc);
                 break;
             case 2:
                 alunoServico.cadastrar(sc);
+                break;
+
+            case 3:
+                System.out.println("voltando...");
                 break;
         }
 

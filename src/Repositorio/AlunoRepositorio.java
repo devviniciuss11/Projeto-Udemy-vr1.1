@@ -4,12 +4,22 @@ import entidades.Aluno;
 import java.util.Scanner;
 
 public class AlunoRepositorio {
-    private static ArrayList <Aluno> alunolist = new ArrayList<>();
+    public static ArrayList <Aluno> alunolist = new ArrayList<>();
 
 
 
     public void salvar(Aluno aluno) {
         alunolist.add(aluno);
+    }
+
+
+    public void mostrarAlunos() {
+        for (int i = 0; i <alunolist.size(); i++) {
+            System.out.println("-------------------Lista de todos os alunos-----------------------");
+            System.out.println(i + 1 + "° Aluno Cadastrado ");
+            System.out.println("Nome: " + alunolist.get(i).getNome());
+            System.out.println("Email: " + alunolist.get(i).getEmail());
+        }
     }
 
 

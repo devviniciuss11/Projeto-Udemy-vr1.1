@@ -10,8 +10,8 @@ public class Aluno extends Usuario {
         super(nome, email, senha, cpf, dataNascimento);
         this.cursosDoAluno = new ArrayList<>();
     }
-    public Aluno() {
-        super("Nome", "Email"  );
+    public Aluno(String nome, String cpf, String dataNascimento) {
+        super(nome, cpf);
         this.cursosDoAluno = new ArrayList<>();
     }
 

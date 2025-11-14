@@ -7,7 +7,7 @@ public class Professor extends Usuario {
 
     private String qualificacoes;
     private String curso;
-
+    
     private ArrayList<Curso> cursosDoProfessor;
 
     public Professor(String nome, String cpf,  String dataNascimento, String email,  String senha, String qualificacoes) {
