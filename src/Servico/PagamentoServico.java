@@ -1,16 +1,12 @@
 package Servico;
 
 import java.util.Scanner;
-import entidades.MetodoDePagamento;
-import Repositorio.PagamentoRepositorio;
+import Repositorio.CursoRepositorio;
+
 
 public class PagamentoServico {
     private Scanner inputpagamento = new Scanner(System.in);
-    private PagamentoRepositorio creditoRepositorio = new PagamentoRepositorio();
-    private PagamentoRepositorio debitoRepositorio = new PagamentoRepositorio();
-    private PagamentoRepositorio pixRepositorio = new PagamentoRepositorio();
-    private PagamentoRepositorio especieRepositorio = new PagamentoRepositorio();
-    private PagamentoRepositorio chequeRepositorio = new PagamentoRepositorio();
+    private CursoRepositorio cursoRepositorio = new CursoRepositorio();
 
     public  boolean metodoDePagamento(String valorDoCurso){
         String valorCursoNumericoStr = valorDoCurso.replaceAll("[^0-9,]", "").replace(",", ".");
@@ -75,6 +71,7 @@ public class PagamentoServico {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+
 
     }
 

@@ -14,10 +14,7 @@ public class CursoRepositorio {
     public void salvarCurso(Curso curso){
         cursolist.add(curso);
     }
-    public Curso salvarCursoDoAluno(Curso curso){
-        cursosDoAluno.add(curso);
-        return curso;
-    }
+
 
     public static void mostrarCurso() {
         for (int i = 0; i < cursolist.size(); i++) {

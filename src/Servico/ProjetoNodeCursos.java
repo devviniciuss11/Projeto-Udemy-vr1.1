@@ -48,7 +48,7 @@ public class ProjetoNodeCursos {
 
                     }
                     catch (Exception e){
-                        System.out.println("Erro ao entrar no menu");
+                        System.out.println("Erro tente novamente");
                     }
                 }
 

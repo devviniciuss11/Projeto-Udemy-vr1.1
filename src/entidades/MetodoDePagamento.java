@@ -9,7 +9,7 @@ public class MetodoDePagamento {
     }
     public MetodoDePagamento(String tipoDoPagamento, String valor_do_pagamneto){
         this.tipoDoPagamento = tipoDoPagamento;
-        this.valorDoPagamento =valor_do_pagamneto;
+        this.valorDoPagamento = valor_do_pagamneto;
     }
 
     public String getTipoDoPagamento(){

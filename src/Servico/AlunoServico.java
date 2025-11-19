@@ -68,12 +68,12 @@ public class AlunoServico {
         for (Aluno aluno : alunolist) {
             if (aluno.getCpf().equals(cpf)) {
                 exluirAluno = aluno;
-                break;
+
             }
         }
         if (exluirAluno != null) {
             System.out.println("Procurando Aluno....");
-            professorlist.remove(exluirAluno);
+            alunolist.remove(exluirAluno);
             System.out.println("O Aluno foi excluído com sucesso.\n");
         } else {
             System.out.println("Aluno não encontrado. Tente novamente!\n");

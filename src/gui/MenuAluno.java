@@ -51,13 +51,12 @@ public class MenuAluno {
                 case 5:
                     AlunoServico alunoServico1 = new AlunoServico();
                     alunoServico1.excluirAluno(sc);
+                    sair = 7;
                     break;
                 case 6:
                     AlunoServico alunoServico2 = new AlunoServico();
                     alunoServico2.alunoVerSeusDados(sc);
                     break;
-
-                default:
 
                 case 7:
                     System.out.println("Voltando Pra tela Inicial...");
