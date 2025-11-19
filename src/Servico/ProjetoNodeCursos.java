@@ -38,7 +38,7 @@ public class ProjetoNodeCursos {
                         case 4:
                         SubMenu subMenu2 = new SubMenu();
                         subMenu2.menuDeCursosOferecidos(sc);
-
+                        break;
                         case 6:
                             System.out.println("Saindo...");
                             Thread.sleep(3000);
