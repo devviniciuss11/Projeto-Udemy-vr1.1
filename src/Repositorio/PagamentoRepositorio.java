@@ -14,27 +14,27 @@ public class PagamentoRepositorio {
     ArrayList<MetodoDePagamento> chequelist = new ArrayList<>();
 
 
-    public void salvarcredito(MetodoDePagamento pagamentocredito) {
+    public void salvarCredito(MetodoDePagamento pagamentocredito) {
         creditolist.add(pagamentocredito);
     }
 
-    public void salvardebito(MetodoDePagamento pagamentodebito) {
+    public void salvarDebito(MetodoDePagamento pagamentodebito) {
         debitolist.add(pagamentodebito);
     }
 
-    public void salvarpix(MetodoDePagamento pagamentopix) {
+    public void salvarPix(MetodoDePagamento pagamentopix) {
         pixlist.add(pagamentopix);
     }
 
-    public void salvarespecie(MetodoDePagamento pagamentoespecie) {
+    public void salvarEspecie(MetodoDePagamento pagamentoespecie) {
         especielist.add(pagamentoespecie);
     }
 
-    public void salvarcheque(MetodoDePagamento pagamentocheque) {
+    public void salvarCheque(MetodoDePagamento pagamentocheque) {
         chequelist.add(pagamentocheque);
     }
 
-    public void mostrando_credito() {
+    public void mostrandoCredito() {
         System.out.println("MOSTRANDO TIPO DE PAGAMENTO (credito): ");
         for (int i = 0; i < creditolist.size(); i++) {
             System.out.println(i + 1 + "º: " + creditolist.get(i).getTipoDoPagamento() + "\nR$:"
@@ -50,7 +50,7 @@ public class PagamentoRepositorio {
         }
     }
 
-    public void mostrando_pix() {
+    public void mostrandoPix() {
         System.out.println("MOSTRANDO TIPO DE PAGAMENTO (pix)");
         for (int i = 0; i < pixlist.size(); i++) {
             System.out.println(i + 1 + "º: " + pixlist.get(i).getTipoDoPagamento() + "\nR$:"
@@ -58,7 +58,7 @@ public class PagamentoRepositorio {
         }
     }
 
-    public void mostrando_especie() {
+    public void mostrandoEspecie() {
         System.out.println("MOSTRANDO TIPO DE PAGAMENTO (espécie)");
         for (int i = 0; i < especielist.size(); i++) {
             System.out.println(i + 1 + "º: " + especielist.get(i).getTipoDoPagamento() + "\nR$:"
@@ -66,7 +66,7 @@ public class PagamentoRepositorio {
         }
     }
 
-    public void mostrando_cheque() {
+    public void mostrandoCheque() {
         System.out.println("MOSTRANDO TIPO DE PAGAMENTO (cheque)");
         for (int i = 0; i < chequelist.size(); i++) {
             System.out.println(i + 1 + "º: " + chequelist.get(i).getTipoDoPagamento() + "\nR$:"

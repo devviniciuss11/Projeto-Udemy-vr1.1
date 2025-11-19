@@ -6,8 +6,6 @@ import entidades.Aluno;
 public class AlunoRepositorio {
     public static ArrayList <Aluno> alunolist = new ArrayList<>();
 
-
-
     public void salvar(Aluno aluno) {
         alunolist.add(aluno);
     }

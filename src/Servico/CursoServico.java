@@ -27,7 +27,7 @@ public class CursoServico {
 
     }
 
-    public void professorRemoverCursos(Scanner sc) {
+    public void professorRemoverCursos() {
        repositoriocurso.removeCurso();
         System.out.println("Curso removido com sucesso!");
     }

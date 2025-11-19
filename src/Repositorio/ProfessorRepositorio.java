@@ -23,7 +23,7 @@ public class ProfessorRepositorio {
 
 
 
-    public Professor loginProfessor(String email, String senha) {
+    public Professor verificarDadosLongin(String email, String senha) {
         for (Professor professor : professorlist) {
             if (professor.getEmail().equalsIgnoreCase(email) && professor.getSenha().equals(senha)) {
                 return professor;

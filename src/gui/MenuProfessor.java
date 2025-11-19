@@ -35,7 +35,7 @@ public class MenuProfessor {
                     break;
                 case 2:
                     CursoServico cursoServico2 = new CursoServico();
-                    cursoServico2.professorRemoverCursos(sc);
+                    cursoServico2.professorRemoverCursos();
                     break;
                 case 3:
                     CursoServico cursoServico3 = new CursoServico();
@@ -49,6 +49,7 @@ public class MenuProfessor {
                 case 5:
                     ProfessorServico professorServico2 = new ProfessorServico();
                     professorServico2.excluirProfessor();
+                    sair = 7;
                     break;
 
 

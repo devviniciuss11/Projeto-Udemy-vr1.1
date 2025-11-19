@@ -61,7 +61,7 @@ public class ProfessorServico {
         String email = sc.nextLine();
         System.out.println("Digite o senha do professor: ");
         String senha = sc.nextLine();
-        Professor professor = repositorioprofessor.loginProfessor(email,senha);
+        Professor professor = repositorioprofessor.verificarDadosLongin(email,senha);
         if(professor != null){
             menuProfessor.menuProfessor(professor,sc);
         }else{
@@ -87,6 +87,7 @@ public class ProfessorServico {
             System.out.println("Procurando Professor....");
             professorlist.remove(professorEncontrado);
             System.out.println("O Professor foi excluído com sucesso.\n");
+
         } else {
             System.out.println("Professor não encontrado. Tente novamente!\n");
         }
