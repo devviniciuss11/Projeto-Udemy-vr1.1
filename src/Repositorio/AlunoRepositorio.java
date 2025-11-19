@@ -1,7 +1,7 @@
 package Repositorio;
 import java.util.ArrayList;
 import entidades.Aluno;
-import java.util.Scanner;
+
 
 public class AlunoRepositorio {
     public static ArrayList <Aluno> alunolist = new ArrayList<>();

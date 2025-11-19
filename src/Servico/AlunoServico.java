@@ -13,7 +13,6 @@ import Repositorio.AlunoRepositorio;
 import Repositorio.CursoRepositorio;
 
 import static Repositorio.AlunoRepositorio.alunolist;
-import static Repositorio.ProfessorRepositorio.professorlist;
 
 public class AlunoServico {
     PagamentoServico pagamentoServico = new PagamentoServico();
