@@ -22,7 +22,7 @@ public class CursoServico {
         System.out.println("Digite o valor do curso: ");
         String valorDoCurso = sc.nextLine();
         Curso curso = new Curso(cursoName, cursoDescricao, cargaHoraria, valorDoCurso);
-        this.repositoriocurso.salvarCurso(curso);
+        this.repositoriocurso.salvarCursoDoProfessor(curso);
         System.out.println("Curso adicionado com sucesso!");
 
     }

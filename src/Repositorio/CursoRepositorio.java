@@ -9,9 +9,9 @@ import java.util.Scanner;
 public class CursoRepositorio {
     private static ArrayList<Curso> cursolist = new ArrayList<Curso>();
     private Scanner sc1 = new Scanner(System.in);
-    private static ArrayList<Curso> cursosDoAluno = new ArrayList<Curso>();
 
-    public void salvarCurso(Curso curso){
+
+    public void salvarCursoDoProfessor(Curso curso){
         cursolist.add(curso);
     }
 

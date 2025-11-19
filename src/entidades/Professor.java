@@ -1,14 +1,13 @@
 package entidades;
 
-import java.util.ArrayList;
 
 
 public class Professor extends Usuario {
 
     private String qualificacoes;
     private String curso;
-    
-    private ArrayList<Curso> cursosDoProfessor;
+
+
 
     public Professor(String nome, String cpf,  String dataNascimento, String email,  String senha, String qualificacoes) {
         super(nome, cpf, dataNascimento, email, senha);
@@ -17,7 +16,6 @@ public class Professor extends Usuario {
     }
     public Professor() {
         super();
-        this.cursosDoProfessor = new ArrayList<>();
     }
 
     public Professor(String nome, String email) {
